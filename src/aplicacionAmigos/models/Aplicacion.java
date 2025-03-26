@@ -55,13 +55,16 @@ public class Aplicacion {
      * Elimina un amigo mediante el correo electronico 
      * @param correoElectronicoABuscar 
      */
-    public void EliminarAmigo(String correoElectronicoABuscar){
+    public boolean EliminarAmigo(String correoElectronicoABuscar){
          for(int i=0 ; i<amigos.size(); i++){
             String correo = amigos.get(i).getCorreoElectronico();
             if (correo.equals(correoElectronicoABuscar)){
                 amigos.remove(i);
+                return true;
             }
+            
         }
+         return false;
     }
     /**
      * Retorna el arreglo de amigos

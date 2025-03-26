@@ -183,9 +183,15 @@ public class EliminarAmigo extends javax.swing.JDialog {
                 JOptionPane.showMessageDialog(this, "El correo debe contener '@'");
                 return;
             }
-            appAmigos.EliminarAmigo(correo);
-            JOptionPane.showMessageDialog(this, "Amigo eliminado");
-            this.dispose();
+            if(appAmigos.EliminarAmigo(correo)){
+                JOptionPane.showMessageDialog(this, "Amigo eliminado");
+                this.dispose();
+            }else{
+                JOptionPane.showMessageDialog(this, "El amigo no existe");
+                this.txtCorreo.setText(" ");
+            }
+            
+            
 
         } catch (DatosObligatoriosException e) {
             JOptionPane.showMessageDialog(this,e.getMessage());
