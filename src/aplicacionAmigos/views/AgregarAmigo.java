@@ -12,14 +12,28 @@ import manejoExcepciones.exceptions.AmigoExistenteException;
 import manejoExcepciones.exceptions.DatosObligatoriosException;
 
 /**
- *
- * @author vanes
+ * Modelo de Ventana que agrega amigo
+ * @since 20250326
+ * @version 1.0
+ * @author Nicoloas Agudelo
+ * @author Vanessa Toro
  */
+
 public class AgregarAmigo extends javax.swing.JDialog {
-    private Aplicacion appAmigos;
-    private VentanaPrincipal ventanaPrincipal;
     /**
-     * Creates new form AgregarAmigo
+     * atributos
+     */
+    //instancia de la aplicacion amigos
+    private Aplicacion appAmigos;
+    //instancia de la ventana principal 
+    private VentanaPrincipal ventanaPrincipal;
+    
+    /**
+     * inicia los atributos de la clase AgregarAmigo
+     * @param parent
+     * @param modal
+     * @param appAmigos
+     * @param ventana 
      */
     public AgregarAmigo(java.awt.Frame parent, boolean modal, Aplicacion appAmigos, VentanaPrincipal ventana) {
         super(parent, modal);
@@ -171,11 +185,17 @@ public class AgregarAmigo extends javax.swing.JDialog {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * evento del botón btnVolver cuando es presionado
+     * @param evt 
+     */
     private void btnVolverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolverMouseClicked
         this.dispose();
     }//GEN-LAST:event_btnVolverMouseClicked
-
+    /**
+     * Evento del botón btnAgregar cuando es presionado 
+     * @param evt 
+     */
     private void btnAgregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarMouseClicked
         try {
             if (txtNombre.getText().trim().isEmpty() || txtTelefono.getText().trim().isEmpty() || 

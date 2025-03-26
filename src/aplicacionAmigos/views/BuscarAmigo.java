@@ -10,16 +10,31 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import manejoExcepciones.exceptions.AmigoNoEncontradoException;
 
-
 /**
- *
- * @author vanes
+ * Ventana que busca amigos agregados
+ * @since 20250326
+ * @version 1.0
+ * @author Nicoloas Agudelo
+ * @author Vanessa Toro
  */
 public class BuscarAmigo extends javax.swing.JDialog {
+    /**
+     * atributos
+     */
+    //instancia de la aplicacion amigos
     private Aplicacion appAmigos;
+    //instancia de la ventana principal 
     private VentanaPrincipal ventanaPrincipal;
     /**
      * Creates new form BuscarAmigo
+     */
+    /**
+     * inicia los atributos de la clase BuscarAmigo
+     * 
+     * @param parent
+     * @param modal
+     * @param appAmigos
+     * @param ventana 
      */
     public BuscarAmigo(java.awt.Frame parent, boolean modal, Aplicacion appAmigos, VentanaPrincipal ventana) {
         super(parent, modal);
@@ -209,11 +224,17 @@ public class BuscarAmigo extends javax.swing.JDialog {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * evento del btnVolver cuando es presionado
+     * @param evt 
+     */
     private void btnVolverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolverMouseClicked
         this.dispose();
     }//GEN-LAST:event_btnVolverMouseClicked
-
+    /**
+     * Evento del btnBuscar cuando es presionado 
+     * @param evt 
+     */
     private void btnBuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBuscarMouseClicked
         try{
             String correo = this.txtCorreo.getText();          

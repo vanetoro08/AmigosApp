@@ -11,10 +11,15 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
- *
- * @author Nico
+ * Modelo de Ventana principal
+ * @since 20250326
+ * @version 1.0
+ * @author Nicoloas Agudelo
+ * @author Vanessa Toro
  */
 public class VentanaPrincipal extends javax.swing.JFrame {
+    //atributos
+    //instancia de la aplicacion amigos
     private Aplicacion appAmigos; 
     
     public VentanaPrincipal(Aplicacion app) {
@@ -354,82 +359,133 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Evento del botón btnAgregarAmigo cuando es presionado
+     * @param evt 
+     */
     private void btnAgregarAmigoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarAmigoMouseClicked
         AgregarAmigo ventanaAgregarAmigo = new AgregarAmigo(this,true,this.appAmigos,this);
         ventanaAgregarAmigo.setVisible(true);
     }//GEN-LAST:event_btnAgregarAmigoMouseClicked
-
+    /**
+     * Evento del botón btnAgregarAmigo cuando es el mouse se le coloca encima
+     * @param evt 
+     */
     private void btnAgregarAmigoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarAmigoMouseEntered
         mouseEntered(btnAgregarAmigo);
     }//GEN-LAST:event_btnAgregarAmigoMouseEntered
-
+    /**
+     * Evento del botón btnAgregarAmigo cuando el mouse sale de su rango
+     * @param evt 
+     */ 
     private void btnAgregarAmigoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarAmigoMouseExited
         mouseExited(btnAgregarAmigo);
     }//GEN-LAST:event_btnAgregarAmigoMouseExited
-
+    /**
+     * Evento del botón btnELiminarrAmigo cuando es presionado
+     * @param evt 
+     */
     private void btnEliminarAmigoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminarAmigoMouseClicked
         EliminarAmigo ventanaEliminarAmigo = new EliminarAmigo(this,true,this.appAmigos,this);
         ventanaEliminarAmigo.setVisible(true);
     }//GEN-LAST:event_btnEliminarAmigoMouseClicked
-
+    /**
+     * Evento del botón btnELiminarrAmigo cuando es el mouse se le coloca encima
+     * @param evt 
+     */
     private void btnEliminarAmigoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminarAmigoMouseEntered
         mouseEntered(btnEliminarAmigo);
     }//GEN-LAST:event_btnEliminarAmigoMouseEntered
-
+    /**
+     * Evento del botón btnELiminarrAmigo cuando el mouse sale de su rango
+     * @param evt 
+     */ 
     private void btnEliminarAmigoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminarAmigoMouseExited
         mouseExited(btnEliminarAmigo);
     }//GEN-LAST:event_btnEliminarAmigoMouseExited
-
+    /**
+     * Evento del botón btnBuscarAmigo cuando es presionado
+     * @param evt 
+     */
     private void btnBuscarAmigoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBuscarAmigoMouseClicked
         BuscarAmigo ventanaBuscarAmigo = new BuscarAmigo(this,true,this.appAmigos,this);
         ventanaBuscarAmigo.setVisible(true);
     }//GEN-LAST:event_btnBuscarAmigoMouseClicked
-
+    /**
+     * Evento del botón btnBuscarAmigo cuando es el mouse se le coloca encima
+     * @param evt 
+     */
     private void btnBuscarAmigoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBuscarAmigoMouseEntered
         mouseEntered(btnBuscarAmigo);
     }//GEN-LAST:event_btnBuscarAmigoMouseEntered
-
+    /**
+     * Evento del botón btnBuscarAmigo cuando el mouse sale de su rango
+     * @param evt 
+     */ 
     private void btnBuscarAmigoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBuscarAmigoMouseExited
         mouseExited(btnBuscarAmigo);
     }//GEN-LAST:event_btnBuscarAmigoMouseExited
-
+    /**
+     * Evento del botón btnMostarAmigos cuando es presionado
+     * @param evt 
+     */
     private void btnMostrarAmigosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMostrarAmigosMouseClicked
         MostrarAmigos ventanaMostrarAmigos = new MostrarAmigos (this,true,this.appAmigos,this);
         ventanaMostrarAmigos.setVisible(true);
     }//GEN-LAST:event_btnMostrarAmigosMouseClicked
-
+    /**
+     * Evento del botón btnMostarAmigos cuando es el mouse se le coloca encima
+     * @param evt 
+     */
     private void btnMostrarAmigosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMostrarAmigosMouseEntered
         mouseEntered(btnMostrarAmigos);
     }//GEN-LAST:event_btnMostrarAmigosMouseEntered
-
+    /**
+     * Evento del botón btnMostarAmigos cuando el mouse sale de su rango
+     * @param evt 
+     */ 
     private void btnMostrarAmigosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMostrarAmigosMouseExited
         mouseExited(btnMostrarAmigos);
     }//GEN-LAST:event_btnMostrarAmigosMouseExited
-
+    /**
+     * Evento del botón btnAcercaDeAplicacion cuando es presionado
+     * @param evt 
+     */
     private void btnAcercaDeAplicacionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAcercaDeAplicacionMouseClicked
         JOptionPane.showMessageDialog(this, "Directorio de Amistades"+ "\n"
                 + "POO"+ "\n" 
                 +"Universidad Autonoma de Manizales"+ "\n"
                 + "Vanessa Toro Sepulveda, Nicolas Agudelo Grajales");
     }//GEN-LAST:event_btnAcercaDeAplicacionMouseClicked
-
+    /**
+     * Evento del botón btnAcercaDeAplicacion cuando es el mouse se le coloca encima
+     * @param evt 
+     */
     private void btnAcercaDeAplicacionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAcercaDeAplicacionMouseEntered
         mouseEntered(btnAcercaDeAplicacion);
     }//GEN-LAST:event_btnAcercaDeAplicacionMouseEntered
-
+    /**
+     * Evento del botón btnAcercaDeAplicacion cuando el mouse sale de su rango
+     * @param evt 
+     */ 
     private void btnAcercaDeAplicacionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAcercaDeAplicacionMouseExited
         mouseExited(btnAcercaDeAplicacion);
     }//GEN-LAST:event_btnAcercaDeAplicacionMouseExited
-
+    /**
+     * Evento del botón btnSalir cuando es presionado
+     * @param evt 
+     */
     private void btnSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSalirMouseClicked
         this.dispose();
     }//GEN-LAST:event_btnSalirMouseClicked
-
+    //metodo para cambiar el color del botón
     private void mouseEntered(JPanel panel){
         panel.setBackground(new Color(246,241,240));
     }
-    
+    /**
+     * metodo para devolver el color original al botón
+     * @param panel 
+     */
     private void mouseExited(JPanel panel){
         panel.setBackground(new Color(255,255,255));
     }

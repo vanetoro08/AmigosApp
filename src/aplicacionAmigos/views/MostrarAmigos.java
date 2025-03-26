@@ -11,16 +11,31 @@ import javax.swing.ImageIcon;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
+
 /**
- *
- * @author vanes
+ * Modelo de Ventana que muestra a los amigos agregados
+ * @since 20250326
+ * @version 1.0
+ * @author Nicoloas Agudelo
+ * @author Vanessa Toro
  */
 public class MostrarAmigos extends javax.swing.JDialog {
+    /**
+     * atributos
+     */
+    //instancia de la aplicacion amigos
     private Aplicacion appAmigos;
+    //instancia de la ventana principal 
     private VentanaPrincipal ventanaPrincipal;
+    //instancia de arreglo dinamico que contiene a los amigos
     private ArrayList <Amigo> amigos;
     /**
-     * Creates new form MostrarContactos
+     * inicia los atributos de la clase MostrarAmigos
+     * 
+     * @param parent
+     * @param modal
+     * @param appAmigos
+     * @param ventana 
      */
     public MostrarAmigos(java.awt.Frame parent, boolean modal, Aplicacion appAmigos,VentanaPrincipal ventana) {
         super(parent, modal);
@@ -161,10 +176,16 @@ public class MostrarAmigos extends javax.swing.JDialog {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Evento del botón btnVolver cuando es presionado
+     * @param evt 
+     */
     private void btnVolverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolverMouseClicked
         this.dispose();
     }//GEN-LAST:event_btnVolverMouseClicked
+   /*
+    * llena la tabla con los datos de los amigos
+    */
     public void llenarTabla(){
         DefaultTableModel modelDefault = new DefaultTableModel (new String []{"Nombre","Telefono"},this.amigos.size());
         this.tablaAmigos.setModel(modelDefault);
