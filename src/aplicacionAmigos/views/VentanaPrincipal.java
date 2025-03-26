@@ -139,6 +139,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         );
 
         btnEliminarAmigo.setBackground(new java.awt.Color(255, 255, 255));
+        btnEliminarAmigo.setForeground(new java.awt.Color(0, 0, 0));
         btnEliminarAmigo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnEliminarAmigoMouseClicked(evt);
@@ -181,6 +182,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         );
 
         btnBuscarAmigo.setBackground(new java.awt.Color(255, 255, 255));
+        btnBuscarAmigo.setForeground(new java.awt.Color(0, 0, 0));
         btnBuscarAmigo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnBuscarAmigoMouseClicked(evt);
@@ -223,6 +225,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         );
 
         btnMostrarAmigos.setBackground(new java.awt.Color(255, 255, 255));
+        btnMostrarAmigos.setForeground(new java.awt.Color(0, 0, 0));
         btnMostrarAmigos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnMostrarAmigosMouseClicked(evt);
@@ -509,7 +512,5 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     // End of variables declaration//GEN-END:variables
 }
