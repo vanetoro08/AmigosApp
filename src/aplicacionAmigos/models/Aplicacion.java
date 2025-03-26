@@ -1,27 +1,29 @@
 package aplicacionAmigos.models;
 import java.util.ArrayList; 
+import manejoExcepciones.exceptions.AmigoExistenteException;
+import manejoExcepciones.exceptions.AmigoNoEncontradoException;
 // @author vanes
 public class Aplicacion {
     
     ArrayList<Amigo> amigos = new ArrayList<>();
     
-    public boolean agregarAmigo(Amigo amigoNuevo){
-        for(int i=0 ; i<amigos.size(); i++){
-            if(amigoNuevo == amigos.get(i)){
-                return false; 
+    public boolean agregarAmigo(Amigo amigoNuevo) throws AmigoExistenteException{
+        for (int i = 0; i < amigos.size(); i++) {
+            if (amigos.get(i).getCorreoElectronico().equals(amigoNuevo.getCorreoElectronico())) {
+                throw new AmigoExistenteException();
             }
         }
-        return true; 
+        return this.amigos.add(amigoNuevo); 
     }
     
-    public Amigo buscarAmigo(String correoElectronicoABuscar) {
+    public Amigo buscarAmigo(String correoElectronicoABuscar) throws AmigoNoEncontradoException{
         for(int i=0 ; i<amigos.size(); i++){
             String correo = amigos.get(i).getCorreoElectronico();
             if (correo.equals(correoElectronicoABuscar)){
                 return amigos.get(i);
             }
         }
-        return null; 
+        throw new AmigoNoEncontradoException(); 
     }
     
     public void EliminarAmigo(String correoElectronicoABuscar){
@@ -31,6 +33,10 @@ public class Aplicacion {
                 amigos.remove(i);
             }
         }
+    }
+    
+    public ArrayList<Amigo> obtenerAmigos(){
+        return amigos;
     }
     
 }

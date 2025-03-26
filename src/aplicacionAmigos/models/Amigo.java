@@ -12,10 +12,7 @@ public class Amigo {
         this.nombre = nombre;
         this.telefono = telefono;
         this.correoElectronico = correoElectronico;
-    }
-
-    
-    
+    } 
     
     public String getNombre() {
         return nombre;

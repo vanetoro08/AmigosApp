@@ -5,6 +5,10 @@
 package aplicacionAmigos.views;
 
 import aplicacionAmigos.models.Aplicacion;
+import java.awt.Color;
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
@@ -17,6 +21,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         initComponents();
         this.appAmigos = app; 
         this.setLocationRelativeTo(null);
+        try{
+            this.setIconImage(new ImageIcon(getClass().getResource("/aplicacionAmigos/images/aplicacion.png")).getImage());
+        }catch(Exception e){
+
+        }
     }
 
     /**
@@ -28,23 +37,423 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        btnAgregarAmigo = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        btnEliminarAmigo = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        btnBuscarAmigo = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        btnMostrarAmigos = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        btnAcercaDeAplicacion = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        btnSalir = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacionAmigos/images/icono.png"))); // NOI18N
+
+        jLabel10.setFont(new java.awt.Font("Lato", 1, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel10.setText("AMIGOS");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(112, 112, 112)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(14, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE))
+                .addGap(8, 8, 8))
+        );
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
+        btnAgregarAmigo.setBackground(new java.awt.Color(255, 255, 255));
+        btnAgregarAmigo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAgregarAmigoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnAgregarAmigoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnAgregarAmigoMouseExited(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Lato", 0, 16)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Agregar amigo");
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacionAmigos/images/agregarAmigo.png"))); // NOI18N
+
+        javax.swing.GroupLayout btnAgregarAmigoLayout = new javax.swing.GroupLayout(btnAgregarAmigo);
+        btnAgregarAmigo.setLayout(btnAgregarAmigoLayout);
+        btnAgregarAmigoLayout.setHorizontalGroup(
+            btnAgregarAmigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnAgregarAmigoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addGap(30, 30, 30)
+                .addComponent(jLabel1)
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+        btnAgregarAmigoLayout.setVerticalGroup(
+            btnAgregarAmigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnAgregarAmigoLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addGap(41, 41, 41))
+            .addGroup(btnAgregarAmigoLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        btnEliminarAmigo.setBackground(new java.awt.Color(255, 255, 255));
+        btnEliminarAmigo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnEliminarAmigoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnEliminarAmigoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnEliminarAmigoMouseExited(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Lato", 0, 16)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Eliminar amigo");
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacionAmigos/images/eliminarAmigo.png"))); // NOI18N
+
+        javax.swing.GroupLayout btnEliminarAmigoLayout = new javax.swing.GroupLayout(btnEliminarAmigo);
+        btnEliminarAmigo.setLayout(btnEliminarAmigoLayout);
+        btnEliminarAmigoLayout.setHorizontalGroup(
+            btnEliminarAmigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnEliminarAmigoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addGap(30, 30, 30)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        btnEliminarAmigoLayout.setVerticalGroup(
+            btnEliminarAmigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnEliminarAmigoLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addGap(41, 41, 41))
+            .addGroup(btnEliminarAmigoLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        btnBuscarAmigo.setBackground(new java.awt.Color(255, 255, 255));
+        btnBuscarAmigo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnBuscarAmigoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnBuscarAmigoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnBuscarAmigoMouseExited(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Lato", 0, 16)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Buscar amigo");
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacionAmigos/images/buscarAmigo.png"))); // NOI18N
+
+        javax.swing.GroupLayout btnBuscarAmigoLayout = new javax.swing.GroupLayout(btnBuscarAmigo);
+        btnBuscarAmigo.setLayout(btnBuscarAmigoLayout);
+        btnBuscarAmigoLayout.setHorizontalGroup(
+            btnBuscarAmigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnBuscarAmigoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6)
+                .addGap(30, 30, 30)
+                .addComponent(jLabel3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        btnBuscarAmigoLayout.setVerticalGroup(
+            btnBuscarAmigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnBuscarAmigoLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel6)
+                .addGap(41, 41, 41))
+            .addGroup(btnBuscarAmigoLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        btnMostrarAmigos.setBackground(new java.awt.Color(255, 255, 255));
+        btnMostrarAmigos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnMostrarAmigosMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnMostrarAmigosMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnMostrarAmigosMouseExited(evt);
+            }
+        });
+
+        jLabel7.setFont(new java.awt.Font("Lato", 0, 16)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setText("Mostrar amigos");
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacionAmigos/images/mostrarAmigos.png"))); // NOI18N
+
+        javax.swing.GroupLayout btnMostrarAmigosLayout = new javax.swing.GroupLayout(btnMostrarAmigos);
+        btnMostrarAmigos.setLayout(btnMostrarAmigosLayout);
+        btnMostrarAmigosLayout.setHorizontalGroup(
+            btnMostrarAmigosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnMostrarAmigosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel8)
+                .addGap(30, 30, 30)
+                .addComponent(jLabel7)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        btnMostrarAmigosLayout.setVerticalGroup(
+            btnMostrarAmigosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnMostrarAmigosLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel8)
+                .addGap(41, 41, 41))
+            .addGroup(btnMostrarAmigosLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel7)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        btnAcercaDeAplicacion.setBackground(new java.awt.Color(255, 255, 255));
+        btnAcercaDeAplicacion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAcercaDeAplicacionMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnAcercaDeAplicacionMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnAcercaDeAplicacionMouseExited(evt);
+            }
+        });
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplicacionAmigos/images/acercaDe.png"))); // NOI18N
+
+        javax.swing.GroupLayout btnAcercaDeAplicacionLayout = new javax.swing.GroupLayout(btnAcercaDeAplicacion);
+        btnAcercaDeAplicacion.setLayout(btnAcercaDeAplicacionLayout);
+        btnAcercaDeAplicacionLayout.setHorizontalGroup(
+            btnAcercaDeAplicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnAcercaDeAplicacionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel12)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        btnAcercaDeAplicacionLayout.setVerticalGroup(
+            btnAcercaDeAplicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnAcercaDeAplicacionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel12)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        btnSalir.setText("Salir");
+        btnSalir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnSalirMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnAcercaDeAplicacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(btnMostrarAmigos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnBuscarAmigo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnEliminarAmigo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnAgregarAmigo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 64, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(138, 138, 138))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnAcercaDeAplicacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(btnAgregarAmigo, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(btnEliminarAmigo, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(btnBuscarAmigo, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)
+                        .addComponent(btnMostrarAmigos, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-   
+    private void btnAgregarAmigoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarAmigoMouseClicked
+        AgregarAmigo ventanaAgregarAmigo = new AgregarAmigo(this,true,this.appAmigos,this);
+        ventanaAgregarAmigo.setVisible(true);
+    }//GEN-LAST:event_btnAgregarAmigoMouseClicked
+
+    private void btnAgregarAmigoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarAmigoMouseEntered
+        mouseEntered(btnAgregarAmigo);
+    }//GEN-LAST:event_btnAgregarAmigoMouseEntered
+
+    private void btnAgregarAmigoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarAmigoMouseExited
+        mouseExited(btnAgregarAmigo);
+    }//GEN-LAST:event_btnAgregarAmigoMouseExited
+
+    private void btnEliminarAmigoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminarAmigoMouseClicked
+        EliminarAmigo ventanaEliminarAmigo = new EliminarAmigo(this,true,this.appAmigos,this);
+        ventanaEliminarAmigo.setVisible(true);
+    }//GEN-LAST:event_btnEliminarAmigoMouseClicked
+
+    private void btnEliminarAmigoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminarAmigoMouseEntered
+        mouseEntered(btnEliminarAmigo);
+    }//GEN-LAST:event_btnEliminarAmigoMouseEntered
+
+    private void btnEliminarAmigoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminarAmigoMouseExited
+        mouseExited(btnEliminarAmigo);
+    }//GEN-LAST:event_btnEliminarAmigoMouseExited
+
+    private void btnBuscarAmigoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBuscarAmigoMouseClicked
+        BuscarAmigo ventanaBuscarAmigo = new BuscarAmigo(this,true,this.appAmigos,this);
+        ventanaBuscarAmigo.setVisible(true);
+    }//GEN-LAST:event_btnBuscarAmigoMouseClicked
+
+    private void btnBuscarAmigoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBuscarAmigoMouseEntered
+        mouseEntered(btnBuscarAmigo);
+    }//GEN-LAST:event_btnBuscarAmigoMouseEntered
+
+    private void btnBuscarAmigoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBuscarAmigoMouseExited
+        mouseExited(btnBuscarAmigo);
+    }//GEN-LAST:event_btnBuscarAmigoMouseExited
+
+    private void btnMostrarAmigosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMostrarAmigosMouseClicked
+        MostrarAmigos ventanaMostrarAmigos = new MostrarAmigos (this,true,this.appAmigos,this);
+        ventanaMostrarAmigos.setVisible(true);
+    }//GEN-LAST:event_btnMostrarAmigosMouseClicked
+
+    private void btnMostrarAmigosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMostrarAmigosMouseEntered
+        mouseEntered(btnMostrarAmigos);
+    }//GEN-LAST:event_btnMostrarAmigosMouseEntered
+
+    private void btnMostrarAmigosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMostrarAmigosMouseExited
+        mouseExited(btnMostrarAmigos);
+    }//GEN-LAST:event_btnMostrarAmigosMouseExited
+
+    private void btnAcercaDeAplicacionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAcercaDeAplicacionMouseClicked
+        JOptionPane.showMessageDialog(this, "Directorio de Amistades"+ "\n"
+                + "POO"+ "\n" 
+                +"Universidad Autonoma de Manizales"+ "\n"
+                + "Vanessa Toro Sepulveda, Nicolas Agudelo Grajales");
+    }//GEN-LAST:event_btnAcercaDeAplicacionMouseClicked
+
+    private void btnAcercaDeAplicacionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAcercaDeAplicacionMouseEntered
+        mouseEntered(btnAcercaDeAplicacion);
+    }//GEN-LAST:event_btnAcercaDeAplicacionMouseEntered
+
+    private void btnAcercaDeAplicacionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAcercaDeAplicacionMouseExited
+        mouseExited(btnAcercaDeAplicacion);
+    }//GEN-LAST:event_btnAcercaDeAplicacionMouseExited
+
+    private void btnSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSalirMouseClicked
+        this.dispose();
+    }//GEN-LAST:event_btnSalirMouseClicked
+
+    private void mouseEntered(JPanel panel){
+        panel.setBackground(new Color(246,241,240));
+    }
+    
+    private void mouseExited(JPanel panel){
+        panel.setBackground(new Color(255,255,255));
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel btnAcercaDeAplicacion;
+    private javax.swing.JPanel btnAgregarAmigo;
+    private javax.swing.JPanel btnBuscarAmigo;
+    private javax.swing.JPanel btnEliminarAmigo;
+    private javax.swing.JPanel btnMostrarAmigos;
+    private javax.swing.JButton btnSalir;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     // End of variables declaration//GEN-END:variables
 }
